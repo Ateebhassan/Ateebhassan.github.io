@@ -2,112 +2,91 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ateeb Links</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="All of Ateeb's links in one place.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ateeb Hassan</title>
+<meta name="description" content="Ateeb Hassan — content creator. WhatsApp, Instagram and email in one place.">
+<meta property="og:title" content="Ateeb Hassan">
+<meta property="og:description" content="Content creator. Reach me on WhatsApp, Instagram or email.">
+<meta property="og:image" content="https://ateebhassan.github.io/ateeb.jpg">
+<meta name="theme-color" content="#1DAFC4">
+<link rel="icon" href="ateeb.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Figtree:wght@400;500;600&display=swap">
 <style>
-/* Layout: one narrow column, profile on top, link rows below, like a phone screen */
+/* Layout: cyan sky band at the top, round photo sitting on its edge, three link buttons below */
 :root{
-  --bg:#e9eef3; --card:#ffffff; --ink:#14233a; --muted:#5b6a80; --line:#d3dbe5;
-  --accent:#f2a516; --accent-ink:#1b1405;
-  --display:"Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
-  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --accent:#1DAFC4; --accent-deep:#0a7d8e; --on-accent:#03282e;
+  --bg:#f4fbfc; --card:#ffffff; --ink:#0b2a31; --muted:#56717a; --line:#d4e9ed;
+  --sky:linear-gradient(160deg,#1DAFC4 0%,#62cfdd 55%,#bfeef4 100%);
+  --display:"Sora","Trebuchet MS",system-ui,sans-serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e1622; --card:#172234; --ink:#eaf0f7; --muted:#9aa9bd; --line:#26344a;
-  --accent:#f5b53d; --accent-ink:#1b1405; color-scheme:dark;
+@media (prefers-color-scheme: dark){:root{
+  --bg:#06191d; --card:#0d262c; --ink:#e6f6f8; --muted:#8fb0b7; --line:#18383f;
+  --accent-deep:#5fd3e3;
+  --sky:linear-gradient(160deg,#0c6f7d 0%,#11909f 55%,#06191d 100%);
+  color-scheme:dark;
 }}
-:root[data-theme="dark"]{
-  --bg:#0e1622; --card:#172234; --ink:#eaf0f7; --muted:#9aa9bd; --line:#26344a;
-  --accent:#f5b53d; --accent-ink:#1b1405; color-scheme:dark;
-}
 *{box-sizing:border-box}
-html,body{background:var(--bg)}
-body{color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));
-  padding-right:max(16px, env(safe-area-inset-right, 0px));
-  padding-block:48px 40px}
-main{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
-
-.profile{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
-.avatar{width:96px;height:96px;border-radius:50%;background:var(--ink);color:var(--bg);
-  display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:40px;
-  box-shadow:0 0 0 4px var(--bg),0 0 0 7px var(--accent)}
-.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover}
-h1{font-family:var(--display);font-weight:700;font-size:30px;margin:6px 0 0;text-wrap:balance;letter-spacing:-.01em}
-.tag{margin:0;color:var(--muted);max-width:32ch}
-.place{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;min-height:100vh}
+.sky{height:150px;background:var(--sky);border-radius:0 0 50% 50% / 0 0 36px 36px}
+main{max-width:440px;margin:-74px auto 0;
+  padding-left:max(18px, env(safe-area-inset-left, 0px));
+  padding-right:max(18px, env(safe-area-inset-right, 0px));
+  padding-block:0 40px;display:flex;flex-direction:column;gap:28px}
+.profile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.photo{width:136px;height:136px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid var(--bg);box-shadow:0 10px 30px rgba(29,175,196,.35)}
+h1{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.02em;margin:12px 0 0;text-wrap:balance}
+.role{margin:0;color:var(--muted)}
+.handle{font-size:13px;font-weight:600;color:var(--accent-deep);letter-spacing:.02em}
 
 .links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
-.links a{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--card);
-  border:1px solid var(--line);border-radius:14px;color:var(--ink);text-decoration:none;
-  font-weight:600;transition:transform .15s ease,border-color .15s ease}
-.links a:hover{transform:translateY(-2px);border-color:var(--accent)}
-.links a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.links svg{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.links .txt{flex:1;min-width:0;display:flex;flex-direction:column}
-.links small{font-weight:400;color:var(--muted);font-size:13px}
-.links .arrow{color:var(--muted)}
-.links a.featured{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.links a.featured small,.links a.featured .arrow{color:var(--accent-ink);opacity:.75}
+.links a{display:flex;align-items:center;gap:14px;padding:15px 18px;background:var(--card);
+  border:1.5px solid var(--line);border-radius:18px;color:var(--ink);text-decoration:none;font-weight:600;
+  transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.links a:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 20px rgba(29,175,196,.18)}
+.links a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex:none;
+  background:rgba(29,175,196,.12);color:var(--accent-deep)}
+.ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.txt small{font-weight:400;color:var(--muted);font-size:13px;overflow-wrap:anywhere}
+.go{color:var(--muted);font-size:18px}
+.links a.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.links a.main .ico{background:rgba(255,255,255,.35);color:var(--on-accent)}
+.links a.main small,.links a.main .go{color:var(--on-accent);opacity:.8}
 
-footer{text-align:center;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:10px;align-items:center}
-button{font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:transparent;
-  border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
-button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+footer{text-align:center;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion: reduce){.links a{transition:none}.links a:hover{transform:none}}
 </style>
 </head>
 <body>
-
+<div class="sky" aria-hidden="true"></div>
 <main>
   <header class="profile">
-    <!-- To use your photo: replace the A below with <img src="photo.jpg" alt="Ateeb"> -->
-    <div class="avatar" aria-hidden="true">A</div>
-    <h1>Ateeb</h1>
-    <p class="tag">Content creator, social media and video. Customer support lead for Shopify apps.</p>
-    <span class="place">Sargodha, Pakistan</span>
+    <img class="photo" src="ateeb.jpg" alt="Ateeb Hassan" width="136" height="136">
+    <h1>Ateeb Hassan</h1>
+    <p class="role">Content creator · Social media &amp; video</p>
+    <span class="handle">@ateeb.hsn</span>
   </header>
 
-  <!-- EDIT LINKS HERE: change each href="..." to your real link. Copy a whole <li> block to add more. -->
   <ul class="links">
-    <li><a class="featured" href="https://wa.me/920000000000" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/><path d="M8.5 9.5c.5 2.5 3 5 5.5 5.5l1.5-1.5 2 1-.5 1.5"/></svg>
-      <span class="txt">Message me on WhatsApp<small>Fastest way to reach me</small></span><span class="arrow">→</span></a></li>
-    <li><a href="https://instagram.com/yourusername" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
-      <span class="txt">Instagram<small>Reels and behind the scenes</small></span><span class="arrow">→</span></a></li>
-    <li><a href="https://youtube.com/@yourchannel" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
-      <span class="txt">YouTube<small>Videos and podcasts</small></span><span class="arrow">→</span></a></li>
-    <li><a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg>
-      <span class="txt">TikTok<small>Short clips</small></span><span class="arrow">→</span></a></li>
-    <li><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
-      <span class="txt">LinkedIn<small>Work and experience</small></span><span class="arrow">→</span></a></li>
-    <li><a href="mailto:you@example.com">
-      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
-      <span class="txt">Email<small>you@example.com</small></span><span class="arrow">→</span></a></li>
+    <li><a class="main" href="https://wa.me/923070797412" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/><path d="M8.6 9.2c.4 2.7 3.2 5.5 5.9 5.9l1.4-1.4 2 1"/></svg></span>
+      <span class="txt">WhatsApp<small>0307 0797412</small></span><span class="go">→</span></a></li>
+    <li><a href="https://instagram.com/ateeb.hsn" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></span>
+      <span class="txt">Instagram<small>@ateeb.hsn</small></span><span class="go">→</span></a></li>
+    <li><a href="mailto:ateeb.hassan01@gmail.com">
+      <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></span>
+      <span class="txt">Email<small>ateeb.hassan01@gmail.com</small></span><span class="go">→</span></a></li>
   </ul>
 
-  <footer>
-    <button type="button" id="copy">Copy page link</button>
-    <span>© Ateeb</span>
-  </footer>
+  <footer>© 2026 Ateeb Hassan</footer>
 </main>
-
-<script>
-document.getElementById('copy').addEventListener('click', function(){
-  var b = this, url = location.href;
-  navigator.clipboard.writeText(url).then(function(){ b.textContent = 'Link copied'; },
-    function(){ b.textContent = url; });
-  setTimeout(function(){ b.textContent = 'Copy page link'; }, 2500);
-});
-</script>
 </body>
 </html>
